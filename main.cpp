@@ -1,11 +1,11 @@
 //COMSC-210 | Lab 37 | Alexander Sierra
 #include <iostream>
+#include "data.txt"
 using namespace std;
 
 int sum_ascii(char []);
 
 int main() {
-    char txt[13];
     char a = 'A';
     cout << a << endl;
     cout << (int) a << endl;
@@ -13,7 +13,9 @@ int main() {
     cout << b << endl;
     cout << (char) b << endl;
 
-    cout << sum_ascii(txt) << endl;
+    char s[] = '536B9DFC93AF'
+    
+    cout << sum_ascii(s) << endl;
 
     return 0;
 }
@@ -30,5 +32,6 @@ int sum_ascii(char s[]) {
     int sum = 0;
     while (i != 12) {
         sum += (int) s[i];
+        i++;
     }
 }
