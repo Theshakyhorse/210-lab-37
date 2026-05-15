@@ -6,15 +6,17 @@
 using namespace std;
 
 int sum_ascii(char []);
+int hashFunc(char []);
 
 int main() {
     char s[13];
     ifstream file("data.txt");
     int total = 0;
+    int index;
     map<int, list<char []>> hash_table;
     
     while (file >> s) {
-        total += sum_ascii(s);
+        index = hashFunc(s);
     }
 
     cout << total << endl;
@@ -30,4 +32,8 @@ int sum_ascii(char s[]) {
         i++;
     }
     return sum;
+}
+
+int hashFunc(char s[]) {
+    return sum_ascii(s) % 97;
 }
