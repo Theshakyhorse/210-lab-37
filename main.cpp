@@ -1,6 +1,8 @@
 //COMSC-210 | Lab 37 | Alexander Sierra
 #include <iostream>
 #include <fstream>
+#include <map>
+#include <list>
 using namespace std;
 
 int sum_ascii(char []);
@@ -9,6 +11,7 @@ int main() {
     char s[13];
     ifstream file("data.txt");
     int total = 0;
+    map<int, list<char []>> hash_table;
     
     while (file >> s) {
         total += sum_ascii(s);
