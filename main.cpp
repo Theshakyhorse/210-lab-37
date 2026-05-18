@@ -93,7 +93,24 @@ int main() {
                 cin >> key;
                 auto it = hash_table.find(key);
                 if (it != hash_table.end()) {
-                    
+                    int option;
+                    cout << endl << "How do you want to modify this:" << endl;
+                    cout << "[1] clear contents" << endl;
+                    cout << "[2] add a string" << endl;
+                    cout << "[3] remove a string" << endl;
+                    cin >> option;
+                    if (option == 1) {
+                        it->second.clear();
+                    }
+                    else if (option == 2) {
+
+                    }
+                    else if (option == 3) {
+
+                    }
+                    else {
+                        
+                    }
                 } else {
                     cout << key << " does not exist" << endl;
                 }
