@@ -122,7 +122,7 @@ int main() {
         }
         else {
             if(choice == 0) {
-
+                cout << "Exiting";
             }
             else {
                 cout << "invalid choice";
