@@ -69,7 +69,7 @@ int main() {
                 cin >> key;
                 auto search = hash_table.find(key);
                 if (search != hash_table.end()) {
-                    cout << key << " already exists";
+                    cout << key << " already exists" << endl;
                 } else {
                     hash_table[key];
                     cout << key << " has been added" << endl;
@@ -78,6 +78,13 @@ int main() {
             } else if(choice == 4) {
                 cout << "enter an integer key to delete:" << endl;
                 cin >> key;
+                auto it = hash_table.find(key);
+                if (it != hash_table.end()) {
+                    hash_table.erase(it);
+                    cout << key << " erased" << endl;
+                } else {
+                    cout << key << " does not exist" << endl;
+                }
 
             } else if(choice == 5) {
 
