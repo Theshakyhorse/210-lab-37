@@ -50,6 +50,7 @@ int main() {
                     }
                 }
             } else if(choice == 2) {
+                //searches for key and displays strings w/ key
                 cout << "enter an integer key to search for:" << endl;
                 cin >> key;
                 auto search = hash_table.find(key);
@@ -63,9 +64,16 @@ int main() {
                 }
                 
             } else if(choice == 3) {
+                //adds a key that doesn't already exist
                 cout << "enter an integer key to add:" << endl;
                 cin >> key;
-                hash_table[key].push_back("");  
+                auto search = hash_table.find(key);
+                if (search != hash_table.end()) {
+                    cout << key << " already exists";
+                } else {
+                    hash_table[key];
+                    cout << key << " has been added" << endl;
+                } 
 
             } else if(choice == 4) {
 
