@@ -21,8 +21,10 @@ int main() {
         hash_table[index].push_back(s);
     }
 
+    //menu
     int choice = 1;
     while (choice != 0) {
+        //options
         cout << "Menu:" << endl;
         cout << "[1] print the first 100 entries" << endl;
         cout << "[2] search for a key" << endl;
@@ -55,7 +57,6 @@ int main() {
             } else if(choice == 5) {
 
             }
-        cout << endl;
         }
         else {
             if(choice == 0) {
@@ -65,6 +66,7 @@ int main() {
                 cout << "invalid choice";
             }
         }
+        cout << endl;
     }
     return 0;
 }
