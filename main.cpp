@@ -23,6 +23,7 @@ int main() {
 
     //menu
     int choice = 1;
+    int key;
     while (choice != 0) {
         //options
         cout << "Menu:" << endl;
@@ -49,6 +50,12 @@ int main() {
                     }
                 }
             } else if(choice == 2) {
+                cout << "enter an integer key to search for:" << endl;
+                cin >> key;
+                auto it = hash_table.find(key);
+                if (it != hash_table.end()) {
+
+                }   
                 
             } else if(choice == 3) {
 
