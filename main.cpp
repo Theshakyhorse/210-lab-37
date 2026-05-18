@@ -76,6 +76,8 @@ int main() {
                 } 
 
             } else if(choice == 4) {
+                cout << "enter an integer key to delete:" << endl;
+                cin >> key;
 
             } else if(choice == 5) {
 
