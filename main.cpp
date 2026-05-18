@@ -50,7 +50,7 @@ int main() {
                     }
                 }
             } else if(choice == 2) {
-                //searches for key and displays strings w/ key
+                //searches for key and displays its strings
                 cout << "enter an integer key to search for:" << endl;
                 cin >> key;
                 auto search = hash_table.find(key);
@@ -76,6 +76,7 @@ int main() {
                 } 
 
             } else if(choice == 4) {
+                //deletes a key and its strings
                 cout << "enter an integer key to delete:" << endl;
                 cin >> key;
                 auto it = hash_table.find(key);
@@ -87,7 +88,15 @@ int main() {
                 }
 
             } else if(choice == 5) {
-
+                //
+                cout << "enter an integer key to modify:" << endl;
+                cin >> key;
+                auto it = hash_table.find(key);
+                if (it != hash_table.end()) {
+                    
+                } else {
+                    cout << key << " does not exist" << endl;
+                }
             }
         }
         else {
