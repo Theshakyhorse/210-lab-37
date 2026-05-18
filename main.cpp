@@ -1,4 +1,4 @@
-//COMSC-210 | Lab 37 | Alexander Sierra
+//COMSC-210 | Lab 38 | Alexander Sierra
 #include <iostream>
 #include <fstream>
 #include <map>
@@ -6,13 +6,6 @@
 using namespace std;
 
 int gen_hash_index(string);
-/*
-I realized a major error w/ this code
-I should have just used string instead of
-char since the code pointed to the address
-instead of the actual text. Sorry for
-fixing this issue much later.
-*/
 
 int main() {
     //declarations
