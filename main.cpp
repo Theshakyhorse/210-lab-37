@@ -63,6 +63,9 @@ int main() {
                 }
                 
             } else if(choice == 3) {
+                cout << "enter an integer key to add:" << endl;
+                cin >> key;
+                hash_table[key].push_back("");  
 
             } else if(choice == 4) {
 
