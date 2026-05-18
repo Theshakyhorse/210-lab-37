@@ -5,15 +5,22 @@
 #include <list>
 using namespace std;
 
-int gen_hash_index(char []);
+int gen_hash_index(string);
+/*
+I realized a major error w/ this code
+I should have just used string instead of
+char since the code pointed to the address
+instead of the actual text. Sorry for
+fixing this issue much later.
+*/
 
 int main() {
     //declarations
-    char s[13];
+    string s;
     ifstream file("data.txt");
     int total = 0;
     int index;
-    map<int, list<char*>> hash_table;
+    map<int, list<string>> hash_table;
     
     //reading data
     while (file >> s) {
@@ -26,7 +33,7 @@ int main() {
     for (auto pair : hash_table) {
         if (i < 100) {
             cout << pair.first << ": ";
-            for (auto& txt : pair.second)
+            for (auto txt : pair.second)
                 cout << txt << " ";
             cout << endl;
             i++;
@@ -37,7 +44,7 @@ int main() {
 }
 
 //sums then returns a hash index
-int gen_hash_index(char s[]) {
+int gen_hash_index(string s) {
     int i = 0;
     int sum = 0;
     while (i != 12) {
