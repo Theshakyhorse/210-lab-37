@@ -52,9 +52,12 @@ int main() {
             } else if(choice == 2) {
                 cout << "enter an integer key to search for:" << endl;
                 cin >> key;
-                auto it = hash_table.find(key);
-                if (it != hash_table.end()) {
-                    //errors
+                auto search = hash_table.find(key);
+                if (search != hash_table.end()) {
+                    cout << "Found " << key << ": ";
+                    for (auto txt : search->second) {
+                        cout << txt << " ";
+                    }
                 } else {
                     cout << key << " not found" << endl;
                 }
