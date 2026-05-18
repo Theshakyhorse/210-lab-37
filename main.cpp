@@ -21,18 +21,51 @@ int main() {
         hash_table[index].push_back(s);
     }
 
-    //outputs 1st 100 map entries
-    int i = 0;
-    for (auto pair : hash_table) {
-        if (i < 100) {
-            cout << pair.first << ": ";
-            for (auto txt : pair.second)
-                cout << txt << " ";
-            cout << endl;
-            i++;
+    int choice = 1;
+    while (choice != 0) {
+        cout << "Menu:" << endl;
+        cout << "[1] print the first 100 entries" << endl;
+        cout << "[2] search for a key" << endl;
+        cout << "[3] add a key" << endl;
+        cout << "[4] remove a key" << endl;
+        cout << "[5] modify a key" << endl;
+        cout << "[0] Exit" << endl;
+        cout << "Enter choice: " << endl;
+        cin >> choice;
+
+        if (choice >= 1 && choice <= 5) {
+            if (choice == 1) {
+                //outputs 1st 100 map entries
+                int i = 0;
+                for (auto pair : hash_table) {
+                    if (i < 100) {
+                        cout << pair.first << ": ";
+                        for (auto txt : pair.second)
+                            cout << txt << " ";
+                        cout << endl;
+                    i++;
+                    }
+                }
+            } else if(choice == 2) {
+                
+            } else if(choice == 3) {
+
+            } else if(choice == 4) {
+
+            } else if(choice == 5) {
+
+            }
+        cout << endl;
+        }
+        else {
+            if(choice == 0) {
+
+            }
+            else {
+                cout << "invalid choice";
+            }
         }
     }
-
     return 0;
 }
 
