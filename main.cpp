@@ -88,7 +88,7 @@ int main() {
                 }
 
             } else if(choice == 5) {
-                //
+        //gives the user options of adding, removing, or clearing strings
                 cout << "enter an integer key to modify:" << endl;
                 cin >> key;
                 auto it = hash_table.find(key);
@@ -103,13 +103,17 @@ int main() {
                         it->second.clear();
                     }
                     else if (option == 2) {
-
+                        cout << "enter a string to add" << endl;
+                        cin >> s;
+                        hash_table[key].push_back(s);
                     }
                     else if (option == 3) {
-
+                        cout << "enter a string to remove" << endl;
+                        cin >> s;
+                        hash_table[key].remove(s);
                     }
                     else {
-                        
+                        cout << "invalid choice" << endl;
                     }
                 } else {
                     cout << key << " does not exist" << endl;
