@@ -54,8 +54,10 @@ int main() {
                 cin >> key;
                 auto it = hash_table.find(key);
                 if (it != hash_table.end()) {
-
-                }   
+                    //errors
+                } else {
+                    cout << key << " not found" << endl;
+                }
                 
             } else if(choice == 3) {
 
